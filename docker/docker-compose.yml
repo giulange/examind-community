@@ -27,16 +27,16 @@ services :
        depends_on:
          - exa-db
        ports:
-         - "8080:8080"
+         - "8070:8080"
          - "8000:8000"
        environment:
          DATABASE_URL: "postgres://examind:examind@exa-db:5432/examind"
          EPSG_DATABASE_URL: "postgres://examind:examind@exa-db:5432/examind"
          CSTL_SECRET: examind-secret
          SPRING_PROFILES_ACTIVE: standard
-         CSTL_SERVICE_URL: "http://localhost:8080/examind/WS"
-         CSTL_REFRESH_URL: "http://localhost:8080/examind/API/auth/extendToken"
-         CSTL_URL: "http://localhost:8080/examind"
+         CSTL_SERVICE_URL: "http://localhost:8070/examind/WS"
+         CSTL_REFRESH_URL: "http://localhost:8070/examind/API/auth/extendToken"
+         CSTL_URL: "http://localhost:8070/examind"
          CSTL_HOME: /var/examind/
          # org.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH allow to send value in path with encoded slash
          # this is needed when some identifiers contains slash, like in STA for example

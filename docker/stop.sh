@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker-compose stop
-docker-compose kill
+docker compose stop
+docker compose kill
